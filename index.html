@@ -324,6 +324,20 @@ main{max-width:52rem;container-type:inline-size}
 
 .view>section.anki{margin-top:2.8rem}
 
+/* ---------- downloads ---------- */
+.dls{display:grid;max-width:41rem;border-top:2px solid var(--ink)}
+.dls a{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 14px;align-items:center;padding:12px 4px;border-bottom:1px solid var(--rule);text-decoration:none;color:var(--ink)}
+.dls a:hover{background:var(--tint)}
+.dls b{font:700 1.05rem var(--f-display)}
+.dls span{grid-column:1;font-size:.93rem;color:var(--pencil)}
+.dls em{grid-row:1 / span 2;grid-column:2;font-style:normal;font-weight:700;font-size:.8rem;color:var(--pen);border:1.5px solid var(--pen);border-radius:999px;padding:6px 12px;white-space:nowrap}
+.dl-note{margin:.7rem 0 0}
+.fc-pdf{margin:1.1rem 0 0;font-size:.95rem;color:var(--pencil)}
+@container (max-width:460px){
+  .dls a{grid-template-columns:minmax(0,1fr)}
+  .dls em{grid-row:auto;grid-column:1;justify-self:start;margin-top:6px}
+}
+
 
 mjx-container[jax="SVG"] {
   direction: ltr;
@@ -490,6 +504,9 @@ mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
 <div class="idx"><a href="#lesson-9" data-lesson="9"><span class="n">9</span><span class="t">Efficiency</span><span class="ck" aria-hidden="true">✓</span><span class="g">Two fair estimators. Which one wobbles less?</span></a><a href="#lesson-10" data-lesson="10"><span class="n">10</span><span class="t">Consistency</span><span class="ck" aria-hidden="true">✓</span><span class="g">More data should bring you closer to the truth.</span></a><a href="#lesson-11" data-lesson="11"><span class="n">11</span><span class="t">Slutsky's theorem</span><span class="ck" aria-hidden="true">✓</span><span class="g">Why it is OK to swap σ for an estimate.</span></a><a href="#lesson-12" data-lesson="12"><span class="n">12</span><span class="t">Method of moments</span><span class="ck" aria-hidden="true">✓</span><span class="g">Match the sample average to the formula, then solve.</span></a><a href="#lesson-13" data-lesson="13"><span class="n">13</span><span class="t">Maximum likelihood</span><span class="ck" aria-hidden="true">✓</span><span class="g">Pick the parameter value that makes your data most likely.</span></a><a href="#lesson-14" data-lesson="14"><span class="n">14</span><span class="t">Fisher information</span><span class="ck" aria-hidden="true">✓</span><span class="g">How sure can I be about my MLE?</span></a></div></div><div class="idx-part"><div class="idx-h"><h3>Part 4 · Testing a claim</h3><span>Chapter 10.1–10.6 · Lectures 21–28</span><span class="tag exam">On Exam II</span></div>
 <div class="idx"><a href="#lesson-15" data-lesson="15"><span class="n">15</span><span class="t">The logic of a test</span><span class="ck" aria-hidden="true">✓</span><span class="g">A yes-or-no decision, and the two ways it can go wrong.</span></a><a href="#lesson-16" data-lesson="16"><span class="n">16</span><span class="t">Power</span><span class="ck" aria-hidden="true">✓</span><span class="g">How good is my test at catching a false H₀?</span></a><a href="#lesson-17" data-lesson="17"><span class="n">17</span><span class="t">Large-sample Z tests</span><span class="ck" aria-hidden="true">✓</span><span class="g">One recipe for testing a mean or a proportion.</span></a><a href="#lesson-18" data-lesson="18"><span class="n">18</span><span class="t">Finding β and the sample size</span><span class="ck" aria-hidden="true">✓</span><span class="g">How often will the test miss, and how much data fixes it?</span></a><a href="#lesson-19" data-lesson="19"><span class="n">19</span><span class="t">Tests and intervals agree</span><span class="ck" aria-hidden="true">✓</span><span class="g">Read a test result straight off a confidence interval.</span></a><a href="#lesson-20" data-lesson="20"><span class="n">20</span><span class="t">p-values</span><span class="ck" aria-hidden="true">✓</span><span class="g">One number that says how strong the evidence is.</span></a></div></div>
 <div class="pair"><a href="#flashcards"><b>Flashcards</b><span>37 cards for Exam II. Flip them here, or take them into Anki.</span></a><a href="#exam-sheet"><b>Exam II on one page</b><span>Every recipe from Parts 3 and 4, ready to copy onto your note page.</span></a></div></section>
+<section><h2 class="sec-h">Print it or take it with you</h2>
+<div class="dls"><a href="STAT4102-Made-Simple-Packet.pdf" download=""><b>Printable packet</b><span>48 pages. Print double-sided: the lesson is on the left page and your practice is on the right.</span><em>Download PDF</em></a><a href="STAT4102-Made-Simple-Answer-Key.pdf" download=""><b>Answer key</b><span>6 pages. Answers and worked solutions for every "Your turn."</span><em>Download PDF</em></a><a href="STAT4102-Made-Simple-Flashcards.pdf" download=""><b>Flashcards to copy by hand</b><span>7 pages. The 37 Exam II cards, front and back side by side.</span><em>Download PDF</em></a><a href="STAT4102-Exam-II-flashcards.apkg" download=""><b>Anki deck</b><span>The same 37 cards for the Anki app. In Anki choose File → Import.</span><em>Download deck</em></a></div>
+</section>
 <p class="printnote">Check marks you add here are saved in this browser only. <button class="reset" id="reset" type="button">Clear my check marks</button></p>
 <nav class="pn" aria-label="Previous and next"><a class="next" href="#symbols">How to read the symbols →</a></nav>
 </section><section class="view" id="v-symbols" hidden="">
@@ -1184,7 +1201,8 @@ mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
 <section class="anki"><h2>Take the cards into Anki</h2>
 <p>Anki is a free flashcard app that decides when you should see each card again. This deck has the same 37 cards, with the equations typeset.</p>
 <p><a class="dl" href="STAT4102-Exam-II-flashcards.apkg" download="">Download the Anki deck (.apkg)</a></p>
-<ol><li>Download the file.</li><li>In Anki, choose <b>File → Import</b> and pick the file. Double-clicking the file also works on a computer.</li><li>The deck shows up as <b>STAT 4102 Made Simple · Exam II</b>.</li></ol></section>
+<ol><li>Download the file.</li><li>In Anki, choose <b>File → Import</b> and pick the file. Double-clicking the file also works on a computer.</li><li>The deck shows up as <b>STAT 4102 Made Simple · Exam II</b>.</li></ol>
+<p class="fc-pdf">Want them on paper instead? <a href="STAT4102-Made-Simple-Flashcards.pdf" download="">Download the flashcards as a PDF</a> (7 pages) and copy the cards by hand.</p></section>
 <div class="l-foot"><span></span><nav class="pn" aria-label="Previous and next"><a class="prev" href="#lesson-20">← Lesson 20: p-values</a><a class="next" href="#exam-sheet">Exam II on one page →</a></nav></div>
 </section><section class="view" id="v-exam-sheet" hidden="">
 <h1 class="page-h">Exam II on one page</h1>
